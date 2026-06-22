@@ -18,5 +18,27 @@ else{
 
 document.getElementById("result").innerHTML =
 "Recommended Crop: " + crop;
+    function chatBot() {
+
+let question =
+document.getElementById("question").value.toLowerCase();
+
+let answer = "";
+
+if(question.includes("paddy")){
+    answer = "Paddy grows well in high nitrogen soil.";
+}
+else if(question.includes("water")){
+    answer = "Paddy requires regular watering.";
+}
+else if(question.includes("fertilizer")){
+    answer = "Use NPK fertilizer based on soil condition.";
+}
+else{
+    answer = "Please ask about crops, water or fertilizer.";
+}
+
+document.getElementById("answer").innerHTML = answer;
+}
 
 }
